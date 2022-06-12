@@ -17,11 +17,11 @@ export const Cities = ({country}) => {
     });
     const [page, setpage] = useState(1);
     const [totalcount, settotalcount] = useState(0);
-    const [sortt, setsortt] = useState("ASC")
-   
+    const [sortt, setsortt] = useState("")
+   console.log(sortt);
     
         useEffect(() => {
-          
+          if(sortt==="ASC"||sortt==="DESC"){
           axios({
             url: `http://localhost:8888/city?_sort=population`,
             params: {
@@ -33,7 +33,22 @@ export const Cities = ({country}) => {
              setinfo(res.data);
              settotalcount(Number(res.headers["x-total-count"]));
           });
+        }
+        else{
+             axios({
+               url: `http://localhost:8888/city`,
+               params: {
+                 _page: page,
+                 _limit: 5,
+               },
+             }).then((res) => {
+               setinfo(res.data);
+               settotalcount(Number(res.headers["x-total-count"]));
+             });
+
+        }
         }, [page,sortt]);
+      
 
          const newTask = (name,population,country) => {
 
@@ -155,7 +170,8 @@ export const Cities = ({country}) => {
       </button>
       <div>
         sort by:
-        <select name="sort" id="" onChange={sort}>
+        <select name="sort" onChange={sort}>
+          <option value="none">none</option>
           <option value="ASC">asc</option>
           <option value="DESC">desc</option>
         </select>
