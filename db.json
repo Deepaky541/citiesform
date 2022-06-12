@@ -1,0 +1,106 @@
+{
+  "countries": [
+    {
+      "id": 1,
+      "country": "India"
+    },
+    {
+      "country": "pakistan",
+      "id": 2
+    },
+    {
+      "country": "canada",
+      "id": 3
+    },
+    {
+      "country": "hi",
+      "id": 4
+    },
+    {
+      "country": "austria",
+      "id": 5
+    },
+    {
+      "country": "eewewwedd",
+      "id": 6
+    },
+    {
+      "country": "uk",
+      "id": 7
+    },
+    {
+      "country": "usa",
+      "id": 8
+    },
+    {
+      "country": "sri lanka",
+      "id": 9
+    },
+    {
+      "country": "germany",
+      "id": 10
+    },
+    {
+      "country": "NETHERLANDS",
+      "id": 11
+    },
+    {
+      "country": "belgium",
+      "id": 12
+    },
+    {
+      "country": "turkey",
+      "id": 13
+    }
+  ],
+  "city": [
+    {
+      "name": "delhi",
+      "population": "11212121",
+      "country": "india",
+      "id": 1
+    },
+    {
+      "name": "mumbai",
+      "population": "21312312",
+      "country": "india",
+      "id": 2
+    },
+    {
+      "name": "mumbai",
+      "population": "1111",
+      "country": "india",
+      "id": 3
+    },
+    {
+      "name": "mumbai",
+      "population": "2222",
+      "country": "india",
+      "id": 4
+    },
+    {
+      "name": "mumbai",
+      "population": "3333",
+      "country": "india",
+      "id": 5
+    },
+    {
+      "name": "belgian",
+      "population": "23123",
+      "country": "belgium",
+      "id": 6
+    },
+    {
+      "name": "mumbai",
+      "population": "444444",
+      "country": "india",
+      "id": 7
+    },
+    {
+      "name": "istanbul",
+      "population": "22424354",
+      "country": "turkey",
+      "id": 8
+    }
+  ]
+}
