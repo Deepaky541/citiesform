@@ -12,38 +12,41 @@ export const Cities = ({country}) => {
     const [info, setinfo] = useState([]);
     const [userData, setUserData] = useState({
         name:"",
-        population:"",
+        population:0,
         country:"india"
     });
     const [page, setpage] = useState(1);
     const [totalcount, settotalcount] = useState(0);
-    const [sortt, setsortt] = useState("asc")
+    const [sortt, setsortt] = useState("ASC")
    
     
         useEffect(() => {
           
           axios({
-            url: `http://localhost:8888/city`,
+            url: `http://localhost:8888/city?_sort=population`,
             params: {
-              _page: page,
-              _limit: 5
+              _order:sortt,
+              _page:page,
+              _limit:5
             },
           }).then((res) => {
              setinfo(res.data);
              settotalcount(Number(res.headers["x-total-count"]));
           });
-        }, [page]);
+        }, [page,sortt]);
 
-         const newTask = (name,population,option) => {
-           fetch("http://localhost:8888/city", {
-             method: "POST",
-             headers: { "Content-Type": "application/json" },
-             body: JSON.stringify({ 
-                 name: name,
-                 population:population,
-                 country:option
-             }),
-           }).then((response) => response.json());
+         const newTask = (name,population,country) => {
+
+            return axios({
+              url: "http://localhost:8888/city",
+              method: "POST",
+             
+              data:{
+                name: name,
+                population: Number(population),
+                country: country,
+              },
+            }).then();
          };
 
          const handleChange=(e)=>{
@@ -64,7 +67,7 @@ export const Cities = ({country}) => {
             }]);
             setUserData({
               name: "",
-              population: "",
+              population: 0,
               country: "",
             });
           };
@@ -78,6 +81,7 @@ export const Cities = ({country}) => {
 
            const sort=(e)=>{
               setsortt(e.target.value)
+              console.log(sortt);
            }
 
   return (
@@ -93,7 +97,7 @@ export const Cities = ({country}) => {
         <input
           name="population"
           type="number"
-          value={userData.population}
+           value={userData.population}
           onChange={handleChange}
         />
 
@@ -152,8 +156,8 @@ export const Cities = ({country}) => {
       <div>
         sort by:
         <select name="sort" id="" onChange={sort}>
-          <option value="asc">asc</option>
-          <option value="desc">desc</option>
+          <option value="ASC">asc</option>
+          <option value="DESC">desc</option>
         </select>
       </div>
     </div>

@@ -55,52 +55,52 @@
   ],
   "city": [
     {
-      "name": "delhi",
-      "population": "11212121",
-      "country": "india",
-      "id": 1
-    },
-    {
       "name": "mumbai",
-      "population": "21312312",
-      "country": "india",
-      "id": 2
-    },
-    {
-      "name": "mumbai",
-      "population": "1111",
+      "population": 1111,
       "country": "india",
       "id": 3
     },
     {
       "name": "mumbai",
-      "population": "2222",
+      "population": 2222,
       "country": "india",
       "id": 4
     },
     {
       "name": "mumbai",
-      "population": "3333",
+      "population": 3333,
       "country": "india",
       "id": 5
     },
     {
-      "name": "belgian",
-      "population": "23123",
-      "country": "belgium",
-      "id": 6
-    },
-    {
       "name": "mumbai",
-      "population": "444444",
+      "population": 444444,
       "country": "india",
       "id": 7
     },
     {
-      "name": "istanbul",
-      "population": "22424354",
-      "country": "turkey",
-      "id": 8
+      "name": "islamabad",
+      "population": 131231,
+      "country": "pakistan",
+      "id": 9
+    },
+    {
+      "name": "london",
+      "population": 3213,
+      "country": "uk",
+      "id": 10
+    },
+    {
+      "name": "as",
+      "population": 21321,
+      "country": "india",
+      "id": 15
+    },
+    {
+      "name": "london",
+      "population": 3221312,
+      "country": "uk",
+      "id": 16
     }
   ]
 }
